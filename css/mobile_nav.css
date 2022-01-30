@@ -1,0 +1,165 @@
+#mobile_nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateX(100%);
+  overflow-y: auto;
+  background: var(--background);
+  padding: 25% 0;
+  z-index: 99;
+}
+#mobile_nav.showNav {
+  transform: translateX(0);
+  transition: 0.4s;
+}
+
+/*Menu Toggle*/
+#toggle {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  z-index: 100;
+  margin-right: 5px;
+}
+#toggle::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--white);
+  transition: 0.2s;
+  transform: translateY(-6px);
+  box-shadow: 0 6px 0 var(--white);
+}
+#toggle::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  margin-left: 10px;
+  border-radius: 2px;
+  background: var(--white);
+  transition: 0.2s;
+  transform: translateY(6px);
+}
+
+#toggle.active::before {
+  width: 20px;
+  position: absolute;
+  top: 45%;
+  right: 50%;
+  transform: translate(50%, 50%) rotate(45deg);
+  box-shadow: 0 6px 0 var(--background);
+}
+#toggle.active::after {
+  width: 20px;
+  position: absolute;
+  top: 45%;
+  right: 50%;
+  transform: translate(50%, 50%) rotate(-45deg);
+}
+#toggle:hover {
+  cursor: pointer;
+}
+/*Menu Toggle End*/
+
+/* My Name */
+.mobile_nav .name {
+  width: 80%;
+  margin: 0 auto;
+  font-family: 'Licorice', cursive;
+  font-size: 2em;
+  text-align: center;
+  color: var(--white);
+  padding: 0 5px 0 0;
+  text-shadow: 2px 1px 5px var(--text_shadow);
+}
+
+/* Job Icons */
+.mobile_nav .job {
+  width: 80%;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7em;
+  color: var(--white);
+  text-align: center;
+  margin: 5px auto;
+  padding-bottom: 10px;
+}
+.mobile_nav .job_icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0px 0px 3px var(--white));
+}
+.mobile_nav .job_icons img {
+  height: 20px;
+  padding: 0 5px;
+}
+
+/* Job icons effect start */
+.mobile_nav .job_icons .shiny_effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.mobile_nav .job_icons .shiny_effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  background: var(--shiny);
+  transform: skewX(45deg) translateX(150px);
+  transition: 0.6s;
+}
+.mobile_nav .job_icons .shiny_effect:hover::before {
+  transform: skewX(45deg) translateX(-150px);
+}
+/* Job icons effect end */
+
+/* .Social media  */
+.social_media ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  list-style: none;
+}
+.social_media ul li {
+  font-size: clamp(0.7em, 2vw, 0.9em);
+  font-family: 'Poppins', sans-serif;
+  background: var(--background);
+  width: 50%;
+  box-shadow: var(--box_shadow) 0px 2px 2px 0px,
+    var(--box_shadow) 0px -2px 2px 0px, var(--box_shadow) 0px 0px 2px inset;
+}
+
+.social_media li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  padding-left: 2.5px;
+  color: var(--white);
+}
+
+.social_media img {
+  height: 25px;
+}
+
+@media only screen and (min-width: 861px) {
+  #mobile_nav {
+    display: none;
+  }
+  #toggle {
+    display: none;
+  }
+}

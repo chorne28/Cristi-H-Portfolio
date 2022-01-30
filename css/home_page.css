@@ -1,0 +1,57 @@
+.content_text {
+  grid-area: content;
+  grid-column: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.content_text .about_me_button {
+  width: fit-content;
+  margin-top: 20px;
+  border: 2px solid var(--black);
+  border-radius: 2px;
+  box-shadow: var(--box_shadow) 0px 2px 2px 0px,
+    var(--box_shadow) 0px -2px 2px 0px, var(--box_shadow) 0px 0px 2px inset;
+}
+.content_text .about_me_button:hover {
+  box-shadow: var(--box_shadow_hover) 0px 2px 2px 0px,
+    var(--box_shadow_hover) 0px -2px 2px 0px,
+    var(--box_shadow_hover) 0px 0px 2px inset;
+  transition: all 0.8s;
+}
+.content_text .about_me_button a {
+  font-size: clamp(1em, 3vw, 1.7em);
+  font-weight: bold;
+  text-align: center;
+  padding: 2.5px;
+  background: var(--background);
+  color: var(--white);
+}
+
+.content_text h1 {
+  width: fit-content;
+  color: var(--white);
+  font-size: clamp(1.5em, 5vw, 3em);
+  line-height: 1.1;
+}
+.content_text h1 span {
+  background: var(--background);
+}
+.content_text .description {
+  width: fit-content;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  color: var(--white);
+  font-size: clamp(0.6em, 3vw, 1.3em);
+  background: var(--background);
+  text-align: left;
+  padding: 0;
+}
+
+@media only screen and (min-width: 861px) {
+  .content_text {
+    width: 80%;
+  }
+}

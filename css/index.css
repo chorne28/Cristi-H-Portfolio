@@ -1,0 +1,68 @@
+@import url(./mobile_nav.css);
+@import url(./desktop_nav.css);
+@import url(./desktop_footer.css);
+@import url(./contact.css);
+@import url(./mobile_footer.css);
+@import url(./about.css);
+@import url(./projects.css);
+@import url(./home_page.css);
+
+:root {
+  --white: #ffd;
+  --black: #090909;
+  --blue: #3d72a4;
+  --background: #090909;
+  --box_shadow: rgba(255, 255, 255, 0.3);
+  --box_shadow_hover: rgba(255, 255, 255, 0.7);
+  --text_shadow: rgba(255, 255, 255, 0.8);
+  --shiny: rgba(255, 255, 255, 0.9);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  display: grid;
+  grid-template-rows: 70px 1fr 100px;
+  grid-template-areas:
+    'header'
+    'section'
+    'footer';
+  min-height: 100vh;
+  background-color: var(--background);
+  background-image: url(../img/main_background.jpg);
+  background-size: cover;
+}
+
+nav {
+  grid-area: header;
+  height: 70px;
+}
+section {
+  grid-area: section;
+}
+.main_content {
+  display: grid;
+  grid-template-areas:
+    ''
+    'content'
+    '';
+}
+
+footer {
+  grid-area: footer;
+  margin-top: auto;
+  height: 100px;
+  background-color: var(--background);
+  box-shadow: var(--box_shadow_hover) 0px 2px 2px 0px,
+    var(--box_shadow_hover) 0px -2px 2px 0px,
+    var(--box_shadow_hover) 0px 0px 2px inset;
+}
+a {
+  text-decoration: none;
+}

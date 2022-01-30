@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cristian Hornea Front-End Developer</title>
+    <link rel="stylesheet" href="../css/index.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Licorice&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- Contact me Start Popup-->
+    <section class="main_content">
+      <div class="contact_me">
+        <h1>contact me</h1>
+        <p>For any questions, please contact me!</p>
+
+        <div class="gmail">
+          <form method="POST" name="contact" data-netlify="true">
+            <label for="firstname">First Name</label>
+            <input
+              type="text"
+              id="firstname"
+              name="Firstname"
+              placeholder="Your name.."
+              required
+            />
+            <label for="lastname">Last Name</label>
+            <input
+              type="text"
+              id="lastname"
+              name="Lastname"
+              placeholder="Your last name.."
+              required
+            />
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="Email"
+              placeholder="Your email address.."
+              required
+            />
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="Subject"
+              placeholder="Write something.."
+              required
+            ></textarea>
+            <button type="submit" class="button">
+              <a href="#">Send me a message</a>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Contact me End -->
+  </body>
+</html>

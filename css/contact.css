@@ -1,0 +1,81 @@
+.contact_me {
+  grid-area: content;
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 10px auto;
+  font-family: 'Poppins', sans-serif;
+}
+.contact_me h1,
+.contact_me p {
+  width: fit-content;
+  color: var(--white);
+  text-align: center;
+  background: var(--background);
+  box-shadow: var(--box_shadow) 0px -1px 0px -2px,
+    var(--box_shadow) 0px 2px 2px -1px, var(--box_shadow) 0px 1px 2px inset;
+  padding: 0 10px;
+  margin-bottom: 5px;
+}
+.contact_me h1 {
+  font-size: 2rem;
+}
+.gmail {
+  width: 100%;
+  margin: 0 auto;
+  background: var(--background);
+  box-shadow: var(--box_shadow) 0px -1px 0px -2px,
+    var(--box_shadow) 0px 2px 2px -1px, var(--box_shadow) 0px 1px 2px inset;
+  padding: 10px;
+}
+
+.gmail label {
+  color: var(--white);
+}
+.gmail input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  background: var(--white);
+  border-radius: 5px;
+  margin: 5px 0;
+}
+textarea {
+  height: 10rem;
+  resize: none;
+}
+
+.gmail .button {
+  width: 100%;
+  background: var(--background);
+  font-weight: bold;
+  border: 2px solid var(--black);
+  border-radius: 2px;
+  box-shadow: var(--box_shadow) 0px 2px 2px 0px,
+    var(--box_shadow) 0px -2px 2px 0px, var(--box_shadow) 0px 0px 2px inset;
+  padding: 5px;
+  cursor: pointer;
+}
+.button:hover {
+  box-shadow: var(--box_shadow_hover) 0px 2px 2px 0px,
+    var(--box_shadow_hover) 0px -2px 2px 0px,
+    var(--box_shadow_hover) 0px 0px 2px inset;
+  transition: all 0.8s;
+}
+.gmail .button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1rem;
+  padding: 5px;
+}
+
+@media only screen and (min-width: 861px) {
+  .gmail {
+    width: 50%;
+  }
+}

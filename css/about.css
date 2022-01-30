@@ -1,0 +1,132 @@
+.about_me_content {
+  grid-area: content;
+  grid-column: 1;
+  width: 90%;
+  margin: 10px auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about_me_content h1 {
+  width: fit-content;
+  margin: 0 auto;
+  font-size: clamp(1em, 5vw, 3em);
+  color: var(--white);
+  background: var(--background);
+}
+.about_me_content h1::before {
+  content: 'About';
+  width: 100%;
+  text-decoration: line-through var(--white);
+  color: var(--background);
+  padding-right: 10px;
+}
+.about_me_content h1::after {
+  content: 'About';
+  width: 100%;
+  text-decoration: line-through var(--white);
+  color: var(--background);
+  padding-left: 10px;
+}
+.my_story {
+  padding: 20px 0;
+}
+
+.my_story .p {
+  color: var(--white);
+  font-size: clamp(0.6em, 3vw, 1.2em);
+  background-color: var(--background);
+  box-shadow: var(--box_shadow) 0px 0px 2px 2px inset;
+  padding: 10px;
+}
+.my_story .p p {
+  line-height: 1.2;
+  word-spacing: 1px;
+  padding: 5px;
+  text-align: left;
+}
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: var(--box_shadow) 0px 2px 2px 0px,
+    var(--box_shadow) 0px -2px 2px 0px, var(--box_shadow) 0px 0px 2px inset;
+  padding: 20px 0;
+}
+
+.skills button {
+  width: fit-content;
+  background: var(--background);
+  box-shadow: var(--box_shadow) 0px 2px 2px 0px,
+    var(--box_shadow) 0px -2px 2px 0px, var(--box_shadow) 0px 0px 2px inset;
+  border: 2px solid var(--black);
+  border-radius: 2px;
+  text-align: left;
+  padding: 5px 10px;
+  margin-top: 20px;
+}
+.skills button:hover {
+  box-shadow: var(--box_shadow_hover) 0px 2px 2px 0px,
+    var(--box_shadow_hover) 0px -2px 2px 0px,
+    var(--box_shadow_hover) 0px 0px 2px inset;
+  transition: all 0.8s;
+}
+.skills a {
+  font-size: clamp(0.8em, 3vw, 1.6em);
+  text-decoration: none;
+  text-align: center;
+  color: var(--white);
+}
+.skills a span {
+  text-decoration: underline;
+}
+
+.skills h6 {
+  font-size: clamp(0.7em, 3vw, 1.5em);
+  text-align: center;
+  color: var(--white);
+}
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skills img {
+  height: 45px;
+  margin: 5px;
+  filter: drop-shadow(0px 0px 2px var(--white));
+}
+
+/* Job icons effect start */
+.skills .shiny_effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.skills .shiny_effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  background: var(--shiny);
+  transform: skewX(45deg) translateX(150px);
+  transition: 0.5s;
+}
+.skills .shiny_effect:hover::before {
+  transform: skewX(45deg) translateX(-150px);
+}
+/* Job icons effect end */
+
+@media only screen and (min-width: 861px) {
+  .about_me_content {
+    width: 80%;
+  }
+  .my_story button {
+    width: 28rem;
+    text-align: center;
+    padding-left: 0;
+  }
+}

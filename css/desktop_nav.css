@@ -1,0 +1,129 @@
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  background-color: var(--background);
+  box-shadow: var(--box_shadow_hover) 0px 2px 2px 0px,
+    var(--box_shadow_hover) 0px -2px 2px 0px,
+    var(--box_shadow_hover) 0px 0px 2px inset;
+  z-index: 100;
+}
+
+.header .logo_name {
+  margin-left: 50px;
+}
+
+.logo_name h1 {
+  font-family: 'Licorice', cursive;
+  color: var(--white);
+  text-align: center;
+  font-size: 2em;
+}
+.logo_name h1 .letter {
+  font-family: 'Licorice', cursive;
+  color: var(--white);
+  text-align: center;
+}
+.logo_name h6 {
+  font-family: 'Press Start 2P', cursive;
+  color: var(--white);
+  padding-bottom: 5px;
+}
+
+/*JavaScript class for fade effect*/
+.span_effect {
+  opacity: 0;
+  transition: all 1s ease;
+}
+span.fade {
+  opacity: 1;
+}
+/* Logo End */
+
+/* Nav List Start */
+
+.header .nav_list_menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2em;
+}
+.header .nav_list_menu li {
+  text-align: center;
+  list-style: none;
+  padding: 0 5px;
+  margin: 0 5px;
+}
+
+.header .nav_list_menu li:hover {
+  border-radius: 0;
+  transition: all 0.8s;
+  box-shadow: var(--box_shadow_hover) 0px 2px 2px 0px,
+    var(--box_shadow_hover) 0px -2px 2px 0px,
+    var(--box_shadow_hover) 0px 0px 2px inset;
+}
+
+.header .nav_list_menu li a {
+  color: var(--white);
+}
+.header .nav_list_menu li a.current_page {
+  font-size: 1.4em;
+  color: var(--white);
+}
+
+/* Logo and List menu Mobile Version Start */
+@media only screen and (max-width: 860px) {
+  .header {
+    background: var(--background);
+    height: 40px;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  /* Logo Name Change */
+
+  .header .logo_name {
+    margin-left: 0px;
+  }
+  .logo_name h1 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo_name h1 .hide_span {
+    visibility: hidden;
+  }
+  .logo_name h6 {
+    display: none;
+  }
+  .logo_name h1 .letter {
+    visibility: visible;
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.65em;
+  }
+  .logo_name h1 .letter_c {
+    top: 50%;
+    left: 10px;
+    transform: translate(50%, -50%);
+    color: var(--white);
+  }
+  .logo_name h1 .letter_h {
+    top: 50%;
+    left: 25px;
+    transform: translate(50%, -50%);
+    color: var(--white);
+  }
+
+  .header .nav_list_menu {
+    display: none;
+  }
+}
+
+/* Logo Mobile Version End */
