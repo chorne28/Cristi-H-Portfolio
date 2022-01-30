@@ -56,16 +56,17 @@ span.fade {
 .header .nav_list_menu li {
   text-align: center;
   list-style: none;
-  padding: 0 5px;
+  padding: 2.5px 10px;
   margin: 0 5px;
+  border-radius: 30px;
 }
 
 .header .nav_list_menu li:hover {
-  border-radius: 0;
-  transition: all 0.8s;
-  box-shadow: var(--box_shadow_hover) 0px 2px 2px 0px,
-    var(--box_shadow_hover) 0px -2px 2px 0px,
-    var(--box_shadow_hover) 0px 0px 2px inset;
+  transition: 0.8s ease-in-out;
+  box-shadow: var(--box_shadow_hover) 2px 2px 10px,
+    var(--box_shadow_hover) -2px -2px 10px,
+    var(--box_shadow_hover) 0px 0px 6px inset;
+  border-radius: 0px;
 }
 
 .header .nav_list_menu li a {

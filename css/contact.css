@@ -65,13 +65,14 @@ textarea {
     var(--box_shadow_hover) 0px 0px 2px inset;
   transition: all 0.8s;
 }
-.gmail .button a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.gmail .button p {
+  width: 100%;
   color: var(--white);
   font-size: 1rem;
+  text-align: center;
   padding: 5px;
+  box-shadow: transparent 0px -1px 0px -2px, transparent 0px 2px 2px -1px,
+    transparent 0px 1px 2px inset;
 }
 
 @media only screen and (min-width: 861px) {
